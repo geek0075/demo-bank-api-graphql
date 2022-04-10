@@ -1,0 +1,132 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""AccessToken model"""
+type AccessToken {
+  """The jwt access token."""
+  access_token: String!
+}
+
+"""Account model"""
+type Account {
+  """The mongodb ObjectId of the account."""
+  _id: String!
+
+  """The accountNo of the account."""
+  accountNo: String!
+
+  """The balance of the account."""
+  balance: Float!
+
+  """The transactions of the account."""
+  transactions: [Transaction!]
+}
+
+input CreateAccountInput {
+  """The accountNo of the account."""
+  accountNo: String!
+
+  """The balance of the account."""
+  balance: Float!
+}
+
+input CreateTransactionInput {
+  """The accountNo of the transaction."""
+  accountNo: String!
+
+  """The amount of the transaction."""
+  amount: Float!
+
+  """The balance of the account after transaction."""
+  balance: Float!
+
+  """The date of the transaction."""
+  date: DateTime!
+
+  """The type of the transaction (deposit|withdraw)."""
+  type: String!
+}
+
+input CreateUserInput {
+  """The full name of the user."""
+  fullName: String!
+
+  """The password of the user."""
+  password: String!
+
+  """The phone number of the user."""
+  phone: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input LoginUserInput {
+  """The password of the user."""
+  password: String
+
+  """The phone number of the user."""
+  phone: String!
+}
+
+type Mutation {
+  createAccount(createAccountInput: CreateAccountInput!): Account!
+  createTransaction(createTransactionInput: CreateTransactionInput!): Transaction!
+  depositAccount(transactAccountInput: TransactAccountInput!): Account!
+  loginUser(loginUserInput: LoginUserInput!): AccessToken!
+  registerUser(createUserInput: CreateUserInput!): User!
+  withdrawAccount(transactAccountInput: TransactAccountInput!): Account!
+}
+
+type Query {
+  account: Account!
+  transactions: [Transaction!]!
+  user: User!
+}
+
+input TransactAccountInput {
+  """The amount of the transaction."""
+  amount: Float!
+}
+
+"""Transaction model"""
+type Transaction {
+  """The mongodb ObjectId of the transaction."""
+  _id: String!
+
+  """The accountNo of the transaction."""
+  accountNo: String!
+
+  """The amount of the transaction."""
+  amount: Float!
+
+  """The balance of the account after transaction."""
+  balance: Float!
+
+  """The date of the transaction."""
+  date: DateTime!
+
+  """The type of the transaction."""
+  type: String!
+}
+
+"""User model"""
+type User {
+  """The mongodb ObjectId of the user."""
+  _id: String!
+
+  """The account of the user."""
+  account: Account
+
+  """The full name of the user."""
+  fullName: String!
+
+  """The password of the user."""
+  password: String!
+
+  """The phone number of the user."""
+  phone: String!
+}
