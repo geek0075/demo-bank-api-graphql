@@ -33,153 +33,88 @@ Coming soon. Have fun with GraphQL playground here:
 02. Login a user using a mutation:
    
     mutation {
-
 	    loginUser(loginUserInput: {phone: "0834567654",password: "gbenga"}) {
-
         access_token
-
       }
-
     }
 
     response:
 
     {
-
       "data": {
-
         "loginUser": {
-
           "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjA4MzQ1Njc2NTQiL
-
           CJzdWIiOiI2MjUyNDNmZTlkN2QwOWI2NWUzMjQ0MWMiLCJpYXQiOjE2NDk2MjMwNDMsImV4cCI6MTY0OTYyNjY0M30.
-
           PN0n5Sl7u1J_J0aKWuJoemgIL0maytHD0jaT9ksHzJ0"
-
         }
-
       }
-
     }
-
 
 03. Run a user query (make sure to set http headers to the token in step 02)
 
     query {
-
       user {
-
         _id
-
         phone
-
         fullName
-
         account {
-
           accountNo
-
           balance
-
           transactions {
-
             date
-
             amount
-
             balance
-
           }
-
         }
-
       }
-
     }
 
     response:
 
     {
-
       "data": {
-
         "user": {
-
           "_id": "625243fe9d7d09b65e32441c",
-
           "phone": "0834567654",
-
           "fullName": "Gbenga Komolafe",
-
           "account": {
-
             "accountNo": "0834567654",
-
             "balance": 0,
-
             "transactions": []
-
           }
-
         }
-
       }
-
     }
-
 
 04. Make a deposit transaction on the account using a mutation (make sure to set http headers to the token in step 02)
 
     mutation {
-
 	    depositAccount(transactAccountInput: {amount: 200}) {
-
         accountNo
-
         balance
-
         transactions {
-
           date
-
           amount
-
           balance
-
         }
-
       }
-
     }
 
     response:
 
     {
-
       "data": {
-
         "depositAccount": {
-
           "accountNo": "0834567654",
-
           "balance": 200,
-
           "transactions": [
-
           {
-
             "date": "2022-04-10T23:35:38.022Z",
-
             "amount": 200,
-
             "balance": 200
-
           }]
-
         }
-
       }
-
     }
     
 
