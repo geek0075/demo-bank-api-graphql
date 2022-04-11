@@ -38,7 +38,7 @@ Coming soon. Have fun with GraphQL playground here:
       }
     }
 
-    response:
+    ####response:
 
     {
       "data": {
@@ -69,7 +69,7 @@ Coming soon. Have fun with GraphQL playground here:
       }
     }
 
-    response:
+    ####response:
 
     {
       "data": {
@@ -100,7 +100,7 @@ Coming soon. Have fun with GraphQL playground here:
       }
     }
 
-    response:
+    ####response:
 
     {
       "data": {
