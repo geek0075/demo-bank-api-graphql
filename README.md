@@ -4,8 +4,6 @@
 
 # MORE DOCUMENTATION AND EXAMPLES COMING SOON BEFORE SUBMISSION DEADLINE. THANKS.
 
-# ALSO STILL BUILDING THE FRONT END USING APOLLO ANGULAR. THANKS.
-
 Fictitious banking application API implemented in NestJS and GraphQL as a GraphQL Server. This application was generated with the NestJS CLI (www.nestjs.com). This application has been deployed to the following url on Heroku:
 
 [https://vbag.herokuapp.com/](https://vbag.herokuapp.com/)
