@@ -2,8 +2,6 @@
 
 # THE VEEGIL FICTITIOUS BANK API FOR NESTJS AND GRAPHQL.
 
-# MORE DOCUMENTATION AND EXAMPLES COMING SOON BEFORE SUBMISSION DEADLINE. THANKS.
-
 Fictitious banking application API implemented in NestJS and GraphQL as a GraphQL Server. This application was generated with the NestJS CLI (www.nestjs.com). This application has been deployed to the following url on Heroku:
 
 [https://vbag.herokuapp.com/](https://vbag.herokuapp.com/)
@@ -118,7 +116,44 @@ Coming soon. Have fun with GraphQL playground here:
     }
     
 
-# MORE DOCUMENTATION AND EXAMPLES COMING SOON BEFORE SUBMISSION DEADLINE. THANKS.
+## MongoDB Database Schema
+
+The API depends on a MongoDB database hosted in the cloud at mongodb.com. This MongoDB database has the following three schemas (Users, Accounts, and Transactions) which are used to represent entities in our Banking API application.
+
+### Users
+
+| Name            | Datatype     | Default         | Size           |
+|-----------------|:-------------|:---------------:|---------------:|
+| _id             | ObjectId     |                 | variable       |
+| fullName        | String       |                 | 50             |
+| phone           | String       |                 | 15             |
+| password        | String       |                 | 50             |
+
+### Accounts
+
+| Name            | Datatype     | Default         | Size           |
+|-----------------|:-------------|:---------------:|---------------:|
+| _id             | ObjectId     |                 | variable       |
+| accountNo       | String       |                 | 15             |
+| balance         | Number       |                 | system         |
+
+### Transactions
+
+| Name            | Datatype     | Default         | Size           |
+|-----------------|:-------------|:---------------:|---------------:|
+| _id             | ObjectId     |                 | variable       |
+| accountNo       | String       |                 | 15             |
+| type            | String       |                 | variable       |
+| date            | Date         |                 | system         |
+| amount          | Number       |                 | system         |
+| balance         | Number       |                 | system         |
+
+## Stay in touch
+
+Kayode Taiwo - kay_taylor@outlook.com.
+
+Please send your comments and questions to me at the email above. Thank you and God bless.
+
 
 
 
